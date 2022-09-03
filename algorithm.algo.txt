@@ -1,0 +1,50 @@
+Ex1:
+ALGORITHM analyse
+VAR
+    c : CHAR := '';
+    nb_char : INTEGER := 0;
+    nb_word : INTEGER := 0;
+    nb_Vow : INTEGER := 0
+
+BEGIN
+    WHILE (c <> ".") DO
+        Read(c);
+        nb_char := nb_char + 1;
+        IF (c ='a' OR c ='e' OR c ='i' OR c ='o' ORc ='u' OR c ='y' c ='A' OR c ='E' OR c ='I' OR c ='O' ORc ='U' OR c ='Y') THEN
+            nb_Vow := nb_Vow + 1;
+        END_IF
+
+        IF (c = " ") THEN
+           nb_word := nb_word + 1 ;
+        END_IF
+    END_WHILE
+    Write ("the length of sentence is", nb_char);
+    Write ("the number of word in the sentence is", nb_word);
+    Write ("the number of vow in the sentence is", nb_Vow);
+END
+
+
+Ex2:
+
+ALGORITHM solution1
+VAR
+tab1, tab2: array_of_integer;
+sum,i,j : INTEGER;
+    
+BEGIN
+    sum=0
+    FOR i FROM 0 TO tab1.length - 1 STEP step 1  DO
+    FOR j FROM 0 TO tab2.length - 1 STEP step 1  DO   
+      IF (tab1[i] = tab2[j]) THEN
+          sum = sum + tab1[i];
+      END_IF    
+    END_FOR
+    END_FOR
+    FOR i FROM 0 TO tab1.length - 1 STEP step 1  DO
+    FOR j FROM 0 TO tab2.length - 1 STEP step 1  DO   
+      IF (tab2[j] =  tab1[i] ) THEN
+          sum = sum + tab2[j];
+      END_IF    
+    END_FOR
+    END_FOR
+END
